@@ -10,7 +10,7 @@ def get(filename):
     return send_from_directory(app.config['MEDIA_ROOT'], filename)
 
 @app.route("/<filename>", methods=['PUT'])
-def post(filename):
+def put(filename):
     extension = os.path.splitext(filename)[1]
     filename = uuid.uuid4().hex + extension
     pathname = os.path.join(app.config['MEDIA_ROOT'], filename)
