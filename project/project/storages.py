@@ -1,5 +1,6 @@
 from django.core.files.storage import Storage
 
+from django.utils.deconstruct import deconstructible
 from django.conf import settings
 
 import os
@@ -19,6 +20,7 @@ class HTTPStorageException(Exception):
             result += ' ' + str(self.cause)
         return result
 
+@deconstructible
 class HTTPStorage(Storage):
 
     def __init__(self, remote=None):
