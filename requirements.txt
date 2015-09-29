@@ -1,0 +1,11 @@
+Django==1.7.10
+Flask==0.10.1
+furl==0.4.8
+itsdangerous==0.24
+Jinja2==2.8
+MarkupSafe==0.23
+orderedmultidict==0.7.5
+Pillow==2.9.0
+requests==2.7.0
+six==1.9.0
+Werkzeug==0.10.4
