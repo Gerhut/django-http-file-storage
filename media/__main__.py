@@ -4,6 +4,7 @@ import os.path, uuid, io, urlparse
 app = Flask(__name__)
 app.config['DEBUG'] = True
 app.config['MEDIA_ROOT'] = os.path.join(os.path.dirname(__file__), 'files')
+app.config['MEDIA_URL'] = 'http://127.0.0.1:5000/'
 
 @app.route("/<filename>")
 def get(filename):
